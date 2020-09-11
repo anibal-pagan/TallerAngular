@@ -1,0 +1,49 @@
+$background-color: #F6F6FF;
+$footer-color: #4926FB;
+$bottom-nav-color: #807FFD;
+$border-color: #C2C1FF;
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0vh;
+    margin-bottom: 5vh;
+    height: 25vh;
+}
+
+.inner-text {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5vh;
+}
+
+.button-group {
+    margin-bottom: 5vh;
+}
+
+form {
+    margin-bottom: 5vh;
+}
+
+.btn-purple {
+    background-color: $footer-color;
+    color: $background-color;
+    border-color: $footer-color;
+}
+ 
+.btn-purple:hover, .btn-purple:focus, .btn-purple:active, .open .dropdown-toggle.btn-purple {
+    background-color: #23117e;
+    border-color: #23117e;
+}
+
+.btn-outline-purple {
+    color: $footer-color;
+    border-color: $footer-color;
+}
+ 
+.btn-outline-purple:hover, .btn-outline-purple:focus, .btn-outline-purple.active, .open .dropdown-toggle.btn-outline-purple {
+    background-color: $footer-color;
+    color: $background-color;
+    border-color: $footer-color;
+}
