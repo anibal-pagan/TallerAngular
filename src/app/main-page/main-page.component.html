@@ -22,10 +22,11 @@
     </div>
     <div class="row">
         <div *ngFor="let tag of tagsArr" class="col-12 d-flex justify-content-center">
-            <div id="tag.name" [ngClass]="getTagColor(tag.confidence)">
-                <p>{{tag.name}}</p>&nbsp;
-                <p>Confidence: {{tag.confidence}}</p>
-            </div>      
+            <div id="tag.name" [ngClass]="getTagColor(tag.confidence)" style="padding: 10px;">
+                <p class="text-center">{{tag.name}}</p>
+                <p class="text-center">Confidence:</p>
+                <p class="text-center">{{tag.confidence}}</p>
+            </div>     
         </div>
     </div>    
 </body>
