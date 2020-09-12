@@ -65,19 +65,54 @@ form {
 
 .green {
     @extend %tag;
-    background-image: url("../../assets/green_tag.png") !important;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
     background-size: 100% 100%;
     
 }
 
 .red {
     @extend %tag;
-    background-image: url("../../assets/red_tag.png") !important;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
     background-size: 100% 100%;
 }
 
 .yellow {
     @extend %tag;
-    background-image: url("../../assets/yellow_tag.png") !important;
+    background-color: #FFBC40;
+    border-radius: 5px;
     background-size: 100% 100%;
+}
+
+.tags-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.tags-list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 40px;
+}
+
+/* Handle */
+.tags-list::-webkit-scrollbar-thumb {
+    background:  #FFBC40; 
+    border-radius: 40px;
+}
+
+/* Handle on hover */
+.tags-list::-webkit-scrollbar-thumb:hover {
+    background: #009eb3; 
+}
+
+.tags-list{
+    height: 50vh;
+    width: 320px;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: scroll; 
+    text-align: center;
 }
