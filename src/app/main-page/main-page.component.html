@@ -4,7 +4,8 @@
             <div class="col-12" style="padding-top: 10vh;">
                 <img alt="computer chip" *ngIf="!showImage" src="../../assets/comp-chip.png">
                 <img id="imageBeingUsed" [hidden]="!showImage">
-                <p class="reg-text inner-text text-center">Let a computer guess what the image is!</p>
+                <p class="reg-text inner-text text-center" *ngIf="!showImage">Let a computer guess what the image is!</p>
+                <p class="reg-text inner-text text-center" [hidden]="!showImage">{{imgDescription}}</p>
             </div>
             <div class="col-12 d-flex justify-content-center">
                 <form [formGroup]="chooseFromFileForm" (ngSubmit)="onAnalyzeSubmit(chooseFromFileForm.value)">
