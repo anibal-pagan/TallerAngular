@@ -1,6 +1,6 @@
 $background-color: #F6F6FF;
 $footer-color: #4926FB;
-$bottom-nav-color: #807FFD;
+$bottom-nav-color: #505096;
 $border-color: #C2C1FF;
 
 img {
@@ -46,4 +46,27 @@ form {
     background-color: $footer-color;
     color: $background-color;
     border-color: $footer-color;
+}
+
+.input {
+    border-radius: 5px;
+    width: 198px;
+    border-color: #C2C1FF;
+    background-color: #F6F6FF;
+}
+
+.green {
+    background-image: url("/assets/green_tag.png") no-repeat !important;
+    background-size: contain;
+    
+}
+
+.red {
+    background-image: url("/assets/red_tag.png") no-repeat !important;
+    background-size: contain;
+}
+
+.yellow {
+    background-image: url("/assets/yellow_tag.png") no-repeat !important;
+    background-size: contain;
 }

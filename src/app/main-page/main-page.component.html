@@ -1,20 +1,31 @@
-<div class="row">
-    <div class="col-12" style="padding-top: 10vh;">
-        <img alt="computer chip" src="../../assets/comp-chip.png">
-        <p class="reg-text inner-text text-center">Let a computer guess what the image is!</p>
+<body>
+    <div class="row">
+        <div class="col-12" style="padding-top: 10vh;">
+            <img alt="computer chip" *ngIf="!showImage" src="../../assets/comp-chip.png">
+            <img id="imageBeingUsed" [hidden]="!showImage">
+            <p class="reg-text inner-text text-center">Let a computer guess what the image is!</p>
+        </div>
     </div>
-</div>
-<div class="btn-toolbar justify-content-center button-group" role="toolbar" aria-label="buttons">
-    <button type="button" class="btn btn-outline-purple" style="margin-right: 25px;">Choose photo from files</button>
-    <button type="button" class="btn btn-purple">Use image url</button>
-</div>
-<div class="row">
-    <div class="col-12 d-flex justify-content-center">
-        <form>
-            <input type="file" class="form-control-file">
-        </form>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <form [formGroup]="chooseFromFileForm" (ngSubmit)="onAnalyzeSubmit(chooseFromFileForm.value)">
+                <div>
+                    <label style="padding-right: 7px;">Image url:</label>
+                    <input class="input" id="urlPath" type="text" formControlName="url">
+                </div>
+                <div style="text-align: center;">
+                    <button type="button" class="btn btn-purple" style="width: 200px; margin-bottom: 5vh;"
+                        type="submit">Analyze!</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="col-12 d-flex justify-content-center">
-        <button type="button" class="btn btn-purple" style="width: 200px; margin-bottom: 5vh;">Analyze!</button>
-    </div>
-</div>
+    <div class="row">
+        <div *ngFor="let tag of tagsArr" class="col-12 d-flex justify-content-center">
+            <div id="tag.name" [ngClass]="getTagColor(tag.confidence)">
+                <p>{{tag.name}}</p>&nbsp;
+                <p>Confidence: {{tag.confidence}}</p>
+            </div>      
+        </div>
+    </div>    
+</body>
