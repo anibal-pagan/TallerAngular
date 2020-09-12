@@ -55,18 +55,29 @@ form {
     background-color: #F6F6FF;
 }
 
+%tag {
+    margin: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 .green {
-    background-image: url("/assets/green_tag.png") no-repeat !important;
-    background-size: contain;
+    @extend %tag;
+    background-image: url("../../assets/green_tag.png") !important;
+    background-size: 100% 100%;
     
 }
 
 .red {
-    background-image: url("/assets/red_tag.png") no-repeat !important;
-    background-size: contain;
+    @extend %tag;
+    background-image: url("../../assets/red_tag.png") !important;
+    background-size: 100% 100%;
 }
 
 .yellow {
-    background-image: url("/assets/yellow_tag.png") no-repeat !important;
-    background-size: contain;
+    @extend %tag;
+    background-image: url("../../assets/yellow_tag.png") !important;
+    background-size: 100% 100%;
 }
