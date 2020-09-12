@@ -17,6 +17,7 @@ export class MainPageComponent implements OnInit {
   public captions: Captions[];
   public showImage: boolean = false;
   public imageBeingUsed: string;
+  public imgDescription: string;
 
   constructor(private imageProcessingService: ImageProcessingService, private formBuilder: FormBuilder) {
     this.chooseFromFileForm = this.formBuilder.group({
@@ -43,6 +44,7 @@ export class MainPageComponent implements OnInit {
       res => {
         this.tagsArr = res.tags;
         this.captions = res.description.captions;
+        this.imgDescription = this.captions[0].text;
       }
     )
   }
